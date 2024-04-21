@@ -3,6 +3,7 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Encriptador</title>
     <!-- <link rel="stylesheet" href="style.css" /> -->
     <link rel="stylesheet" href="reset.css" />
@@ -14,11 +15,11 @@
   </head>
 
   <body>
-    <!-- <header> -->
-    <div class="logo-container">
-      <img src="imagenes\Logo.svg" alt="Logo de Alura" />
-    </div>
-    <!-- </header> -->
+    <header>
+      <div class="logo-container">
+        <img src="imagenes\Logo.svg" alt="Logo de Alura" />
+      </div>
+    </header>
     <main>
       <!-- <h1 class="titulo-principal">Barbería Alura</h1> -->
       <section class="input-section">
@@ -27,14 +28,33 @@
           rows="6"
           placeholder="Ingrese el texto aqui"
         ></textarea>
-        <section class="btn-section">
-          <button class="btnEncriptar">Encriptar</button>
-          <button class="btnDesencriptar">Desencriptar</button>
+        <section>
+          <section class="recommendation-container">
+            <div class="recommendation-img">
+              <img
+                src="imagenes\bi_exclamation-circle-fill.svg"
+                alt="imagen signo de admiracion"
+              />
+            </div>
+            <p class="recommendation-message">
+              Solo letras minúsculas y sin acentos
+            </p>
+          </section>
+          <section class="btn-section">
+            <button class="btnEncriptar">Encriptar</button>
+            <button class="btnDesencriptar">Desencriptar</button>
+          </section>
         </section>
       </section>
       <section class="msj-section">
-        <p class="msjEncriptado">Texto encriptado:</p>
-        <p class="msjDesencriptado">Texto desencriptado:</p>
+        <section>
+          <img
+            src="imagenes\Muñeco.svg"
+            alt="Imagen de muñeco en la sección del mensaje encriptado."
+          />
+          <p class="msjEncriptado">Texto encriptado:</p>
+          <p class="msjDesencriptado">Texto desencriptado:</p>
+        </section>
       </section>
     </main>
   </body>

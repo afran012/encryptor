@@ -5,8 +5,8 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  margin: 0;
-  padding: 0;
+  /* margin: 0; */
+  /* padding: 0; */
   box-sizing: border-box;
 }
 main {
@@ -14,12 +14,15 @@ main {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  /* justify-content: space-evenly; */
   width: 100%;
-  /*  height: 100vh; Esto hace que el main tenga el alto de la pantalla */
+  height: 100vh; /*Esto hace que el main tenga el alto de la pantalla */
   overflow: auto; /* Esto evita que el contenido se desborde */
-  /*box-sizing: border-box;  Esto asegura que el padding y el borde estén incluidos en el ancho y la altura */
+  /* box-sizing: border-box; */ /*Esto asegura que el padding y el borde estén incluidos en el ancho y la altura */
   /* padding: 20px; Añade un poco de espacio alrededor del contenido */
   flex-wrap: wrap;
+  gap: 84px;
+
 }
 
 .logo-container {
@@ -32,25 +35,30 @@ main {
   /* opacity: 0; */
 }
 
-/* .input-section {
-  width: 100px;
-} */
+.input-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* align-items: center; */
+  /* width: 100px; */
+  height: 72%;
+}
 
 .inputEncriptar {
-  width: 100vh; 
+/*   width: 100vh;
   max-width: 577px;
-  min-height: 48px;
+  min-height: 48px; */
   font-family: "Inter", sans-serif;
   font-size: 32px;
-  font-weight: 400;
-  /* line-height: 48px; */
+/*   font-weight: 400;
+  line-height: 48px; */
   text-align: left;
   background: transparent;
   margin: 0;
   border: none;
   color: #0a3871;
- /*  resize: none; */ /* Esto evita que el usuario pueda cambiar manualmente el tamaño del textarea */
-  overflow: auto;
+  resize: none; /* Esto evita que el usuario pueda cambiar manualmente el tamaño del textarea */
+  /* overflow: auto; */
 }
 
 .inputEncriptar::placeholder {
@@ -76,7 +84,7 @@ main {
   justify-content: center;
   height: auto;
   /* max-height: 67px; */
-  width: 100%;
+  /* width: 100%; */
   gap: 24px;
   /* opacity: 0; */
   flex-wrap: wrap;
@@ -105,5 +113,32 @@ main {
   color: darkblue;
   background: #d8dfe8;
   border: 1px solid #0a3871;
-  /* margin-left: 10px; */
+}
+.recommendation-container {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  opacity: 0px;
+  margin-bottom: 10px;
+}
+.recommendation-img {
+  gap: 0px;
+  opacity: 0px;
+}
+.recommendation-message {
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
+}
+.msj-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  /* height: 944px; */
+  height: 80%;
+  border-radius: 32px;
+  background: #ffffff;
 }
