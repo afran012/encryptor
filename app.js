@@ -24,14 +24,6 @@ btnCopy.addEventListener("click", () => {
   console.log(innerHTML);
 });
 
-/* const rules = {
-  e: "enter",
-  i: "imes",
-  a: "ai",
-  o: "ober",
-  u: "ufat",
-}; */
-
 function encrypt(text) {
   let encryptedText = "";
   for (let char of text) {
@@ -57,8 +49,8 @@ function encrypt(text) {
   }
   return encryptedText;
 }
+
 function decrypt(text) {
-  let decryptedText = text;
   const rules = {
     enter: "e",
     imes: "i",
@@ -66,10 +58,30 @@ function decrypt(text) {
     ober: "o",
     ufat: "u",
   };
-  for (let key in rules) {
-    let re = new RegExp(key, "g");
-    decryptedText = decryptedText.replace(re, rules[key]);
+
+  let decryptedText = "";
+  let i = 0;
+
+  while (i < text.length) {
+    let found = false;
+
+    for (let len = 5; len >= 2; len--) {
+      let fragment = text.substr(i, len);
+
+      if (rules[fragment]) {
+        decryptedText += rules[fragment];
+        i += len;
+        found = true;
+        break;
+      }
+    }
+
+    if (!found) {
+      decryptedText += text[i];
+      i++;
+    }
   }
+
   return decryptedText;
 }
 const btnEncriptar = document.querySelector(".btnEncriptar");
