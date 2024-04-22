@@ -239,9 +239,9 @@ main {
 }
 
 .img-msj-encrypt-section {
-  display: none;
+  display: block;
 }
 
 .msj-encrypt-section {
-  /* display: none; */
+  display: none;
 }
